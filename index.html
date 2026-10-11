@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#102a43">
+	<meta name="description" content="The official home of the Georgia 4th Congressional District Republican Party. Find upcoming events, connect with neighbors, and get involved.">
+	<title>Georgia's 4th District Republicans | GA-04 GAGOP</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					colors: {
+						ink: '#102a43',
+						navy: '#173b5e',
+						crimson: '#C5282F',
+						paper: '#f6f7f8',
+						mist: '#e7edf1',
+						slate: '#536575'
+					},
+					fontFamily: {
+						sans: ['DM Sans', 'sans-serif'],
+						display: ['Libre Baskerville', 'Georgia', 'serif']
+					}
+				}
+			}
+		};
+	</script>
+	<style>
+		:root { color-scheme: light; }
+		html { scroll-behavior: smooth; }
+		body { font-family: 'DM Sans', sans-serif; }
+		.display-font { font-family: 'Libre Baskerville', Georgia, serif; }
+		.hero-image {
+			background-image: linear-gradient(90deg, rgba(9, 29, 49, .93) 0%, rgba(9, 29, 49, .78) 47%, rgba(9, 29, 49, .24) 100%), url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=2200&q=85');
+			background-position: center 48%;
+			background-size: cover;
+		}
+		.section-view[hidden] { display: none; }
+		.nav-link[aria-current="page"] { color: #fff; }
+		.nav-link[aria-current="page"]::after { transform: scaleX(1); }
+		.nav-link::after { content: ''; display: block; height: 2px; margin-top: 5px; background: #C5282F; transform: scaleX(0); transform-origin: left; transition: transform .2s ease; }
+		#newsletter-dialog::backdrop { background: rgba(16, 42, 67, .72); }
+		@media (prefers-reduced-motion: reduce) {
+			html { scroll-behavior: auto; }
+			*, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+		}
+	</style>
+	<script>
+		(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+		.push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+		n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+		(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+		ml('account', '2691461');
+	</script>
+</head>
+<body class="bg-white text-ink antialiased">
+	<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:bg-white focus:px-4 focus:py-3 focus:text-ink">Skip to content</a>
+	<header class="sticky top-0 z-50 border-b border-white/10 bg-ink text-white">
+		<div class="mx-auto flex min-h-[76px] max-w-7xl flex-wrap items-center justify-between gap-5 px-5 py-3 sm:px-8 lg:flex-nowrap lg:py-0">
+			<a href="index.html#home" class="inline-flex items-center gap-3" aria-label="GA-04 GAGOP home">
+				<img src="sMucHBX-_400x400.jpg" alt="GA-04 GAGOP Logo" class="h-8 w-8 shrink-0 rounded-full object-cover">
+				<span class="min-w-0">
+					<span class="block truncate text-[11px] font-semibold uppercase tracking-[.18em] text-white/65">Georgia Republicans</span>
+					<span class="block truncate text-[15px] font-bold tracking-[.04em]">4th Congressional District</span>
+				</span>
+			</a>
+			<nav aria-label="Main navigation" class="flex w-full flex-wrap items-center justify-between gap-x-4 gap-y-2 sm:gap-x-5 lg:w-auto lg:shrink-0 lg:justify-end lg:gap-5 xl:gap-8">
+				<a class="nav-link text-[13px] font-semibold text-white/70 transition-colors hover:text-white" href="#home" aria-current="page">Home</a>
+				<a class="nav-link text-[13px] font-semibold text-white/70 transition-colors hover:text-white" href="#news">News &amp; Events</a>
+				<a class="nav-link text-[13px] font-semibold text-white/70 transition-colors hover:text-white" href="sponsorship.html">Sponsorship</a>
+				<a href="https://www.youtube.com/@TheVoiceoftheFourth" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-9 max-w-full items-center border border-white/20 bg-crimson px-3 py-2 text-center text-[10px] font-bold leading-4 text-white transition-colors hover:bg-red-700 sm:text-[11px] sm:tracking-[.02em]">Podcast Coming Soon: The Voice of the 4th</a>
+				<a href="#" data-coming-soon-open class="hidden min-h-10 items-center border border-white/60 px-4 py-2.5 text-[12px] font-bold uppercase tracking-[.08em] text-white transition-colors hover:border-white hover:bg-white hover:text-ink sm:inline-flex">Merch</a>
+				<a href="#" data-coming-soon-open class="hidden bg-crimson px-4 py-2.5 text-[12px] font-bold uppercase tracking-[.08em] text-white transition-colors hover:bg-red-700 sm:inline-flex">Donate</a>
+			</nav>
+		</div>
+	</header>
+
+	<main id="main">
+		<div id="home" class="section-view" data-view="home">
+			<section class="hero-image relative flex min-h-[570px] items-center text-white sm:min-h-[650px]">
+				<div class="mx-auto w-full max-w-7xl px-5 py-20 sm:px-8 sm:py-28">
+					<div class="max-w-[740px]">
+						<p class="mb-7 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[.22em] text-white/80"><span class="h-px w-8 bg-crimson"></span>Georgia's 4th Congressional District</p>
+						<h1 class="display-font max-w-[700px] text-[39px] leading-[1.18] sm:text-[54px] sm:leading-[1.15]">Conservative values.<br><span class="text-white/75">A stronger Georgia.</span></h1>
+						<p class="mt-7 max-w-xl text-[16px] leading-7 text-white/80 sm:text-[18px] sm:leading-8">Welcome to the official home of the 4th Congressional District Georgia Republican Party. Together, we can strengthen our communities and shape the future of our state.</p>
+						<div class="mt-9 flex flex-wrap gap-3">
+							<button type="button" data-newsletter-open class="inline-flex min-h-12 items-center justify-center gap-3 bg-crimson px-6 text-[12px] font-bold uppercase tracking-[.09em] text-white transition-colors hover:bg-red-700">Subscribe to Newsletter <span aria-hidden="true">&#8594;</span></button>
+							<a href="#" data-coming-soon-open class="inline-flex min-h-12 items-center justify-center border border-white/60 px-6 text-[12px] font-bold uppercase tracking-[.09em] text-white transition-colors hover:bg-white hover:text-ink">Donate <span class="ml-3" aria-hidden="true">&#8594;</span></a>
+						</div>
+					</div>
+				</div>
+				<div class="absolute bottom-0 left-0 right-0 h-1 bg-crimson"></div>
+			</section>
+
+			<section class="bg-paper">
+				<div class="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[.8fr_1.2fr] lg:gap-20">
+					<div>
+						<p class="text-[11px] font-bold uppercase tracking-[.2em] text-crimson">Our purpose</p>
+						<h2 class="display-font mt-4 max-w-md text-[29px] leading-[1.35] sm:text-[35px]">Grounded in principle.<br>Powered by people.</h2>
+					</div>
+					<div>
+						<p class="max-w-2xl text-[16px] leading-8 text-slate">We believe strong communities begin with individual liberty, personal responsibility, and opportunity for every Georgian. Our district brings neighbors together to put those beliefs into action.</p>
+						<div class="mt-9 grid gap-7 border-t border-slate/20 pt-7 sm:grid-cols-2">
+							<div>
+								<span class="text-[11px] font-bold uppercase tracking-[.16em] text-crimson">01 / Principles</span>
+								<h3 class="mt-2 text-[17px] font-bold">Conservative values</h3>
+								<p class="mt-2 text-[14px] leading-6 text-slate">Advancing freedom, limited government, and the values that help Georgia thrive.</p>
+							</div>
+							<div>
+								<span class="text-[11px] font-bold uppercase tracking-[.16em] text-crimson">02 / Action</span>
+								<h3 class="mt-2 text-[17px] font-bold">Grassroots engagement</h3>
+								<p class="mt-2 text-[14px] leading-6 text-slate">Connecting local voices with meaningful ways to serve, organize, and lead.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="bg-white">
+				<div class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 px-5 py-12 sm:px-8 md:flex-row md:items-center">
+					<div>
+						<p class="text-[11px] font-bold uppercase tracking-[.2em] text-crimson">Get involved</p>
+						<h2 class="display-font mt-3 text-[26px] leading-snug sm:text-[30px]">Be part of the work ahead.</h2>
+					</div>
+					<div class="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+						<button type="button" data-newsletter-open class="inline-flex min-h-12 items-center justify-center bg-ink px-6 text-[12px] font-bold uppercase tracking-[.08em] text-white transition-colors hover:bg-navy">Subscribe to Newsletter <span class="ml-3" aria-hidden="true">&#8594;</span></button>
+						<a href="#" data-coming-soon-open class="inline-flex min-h-12 items-center justify-center border border-ink px-7 text-[12px] font-bold uppercase tracking-[.08em] text-ink transition-colors hover:bg-ink hover:text-white">Donate <span class="ml-3" aria-hidden="true">&#8594;</span></a>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<div id="news" class="section-view" data-view="news" hidden>
+			<section class="bg-ink text-white">
+				<div class="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-[76px]">
+					<p class="text-[11px] font-bold uppercase tracking-[.22em] text-white/60">Stay connected</p>
+					<h1 class="display-font mt-4 text-[38px] leading-tight sm:text-[50px]">News &amp; Events</h1>
+					<p class="mt-5 max-w-xl text-[16px] leading-7 text-white/70">Meet fellow Republicans, get the latest district updates, and find your next opportunity to take part.</p>
+				</div>
+				<div class="h-1 bg-crimson"></div>
+			</section>
+
+			<section class="bg-paper" aria-labelledby="events-heading">
+				<div class="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-16">
+					<div class="flex flex-col justify-between gap-4 border-b border-slate/20 pb-6 sm:flex-row sm:items-end">
+						<div>
+							<p class="text-[11px] font-bold uppercase tracking-[.2em] text-crimson">Mark your calendar</p>
+							<h2 id="events-heading" class="display-font mt-3 text-[29px] sm:text-[34px]">Upcoming events</h2>
+						</div>
+						<p class="text-[13px] text-slate">More details coming soon</p>
+					</div>
+					<div class="divide-y divide-slate/20">
+						<article class="grid gap-4 py-7 sm:grid-cols-[150px_1fr_auto] sm:items-center sm:gap-8">
+							<div class="text-[12px] font-bold uppercase tracking-[.1em] text-crimson">December 2026</div>
+							<div>
+								<h3 class="text-[19px] font-bold">First Annual Relaunch Gala</h3>
+								<p class="mt-2 max-w-2xl text-[14px] leading-6 text-slate">Celebrate the official launch of our digital infrastructure and the district's relaunch with fellow conservatives. Venue and ticket information to be announced.</p>
+							</div>
+							<div class="text-[13px] font-medium text-slate sm:text-right">Time &amp; venue TBD</div>
+						</article>
+						<article class="grid gap-4 py-7 sm:grid-cols-[150px_1fr_auto] sm:items-center sm:gap-8">
+							<div class="text-[12px] font-bold uppercase tracking-[.1em] text-crimson">February 20, 2027</div>
+							<div>
+								<h3 class="text-[19px] font-bold">Precinct Caucuses</h3>
+								<p class="mt-2 max-w-2xl text-[14px] leading-6 text-slate">Local precinct meetings across the district.</p>
+							</div>
+							<div class="text-[13px] font-medium text-slate sm:text-right">Local precinct meetings across the district</div>
+						</article>
+						<article class="grid gap-4 py-7 sm:grid-cols-[150px_1fr_auto] sm:items-center sm:gap-8">
+							<div class="text-[12px] font-bold uppercase tracking-[.1em] text-crimson">March 20, 2027</div>
+							<div>
+								<h3 class="text-[19px] font-bold">County Conventions</h3>
+								<p class="mt-2 max-w-2xl text-[14px] leading-6 text-slate">DeKalb County convention details TBD.</p>
+							</div>
+							<div class="text-[13px] font-medium text-slate sm:text-right">DeKalb County convention details TBD</div>
+						</article>
+						<article class="grid gap-4 py-7 sm:grid-cols-[150px_1fr_auto] sm:items-center sm:gap-8">
+							<div class="text-[12px] font-bold uppercase tracking-[.1em] text-crimson">April 10, 2027</div>
+							<div>
+								<h3 class="text-[19px] font-bold">Congressional District Conventions</h3>
+								<p class="mt-2 max-w-2xl text-[14px] leading-6 text-slate">4th District Convention.</p>
+							</div>
+							<div class="text-[13px] font-medium text-slate sm:text-right">4th District Convention</div>
+						</article>
+						<article class="grid gap-4 py-7 sm:grid-cols-[150px_1fr_auto] sm:items-center sm:gap-8">
+							<div class="text-[12px] font-bold uppercase tracking-[.1em] text-crimson">June 4–5, 2027</div>
+							<div>
+								<h3 class="text-[19px] font-bold">State Convention</h3>
+								<p class="mt-2 max-w-2xl text-[14px] leading-6 text-slate">Georgia State GOP Convention.</p>
+							</div>
+							<div class="text-[13px] font-medium text-slate sm:text-right">Georgia State GOP Convention</div>
+						</article>
+						<article class="grid gap-4 py-7 sm:grid-cols-[150px_1fr_auto] sm:items-center sm:gap-8">
+							<div class="text-[12px] font-bold uppercase tracking-[.1em] text-crimson">Quarterly</div>
+							<div>
+								<h3 class="text-[19px] font-bold">Quarterly Zoom Calls</h3>
+								<p class="mt-2 max-w-2xl text-[14px] leading-6 text-slate">Join district members for updates, conversation, and a look at what's ahead. Registration details will be shared before each call.</p>
+							</div>
+							<div class="text-[13px] font-medium text-slate sm:text-right">Online · Date &amp; time TBD</div>
+						</article>
+						<article class="grid gap-4 py-7 sm:grid-cols-[150px_1fr_auto] sm:items-center sm:gap-8">
+							<div class="text-[12px] font-bold uppercase tracking-[.1em] text-crimson">Quarterly</div>
+							<div>
+								<h3 class="text-[19px] font-bold"><a class="transition-colors hover:text-crimson hover:underline" href="urban-coalition.html">Urban Free-Market Coalition</a></h3>
+								<p class="mt-2 max-w-2xl text-[14px] leading-6 text-slate">A quarterly gathering focused on free-market solutions, urban economic policy, and grassroots conservative advocacy.</p>
+							</div>
+							<div class="text-[13px] font-medium text-slate sm:text-right">Date &amp; venue TBD</div>
+						</article>
+					</div>
+					<p class="border-t border-slate/20 pt-5 text-[12px] leading-5 text-slate">Event dates, times, and locations are placeholders. Please check back for confirmed details.</p>
+				</div>
+			</section>
+
+			<section class="bg-white" aria-labelledby="social-heading">
+				<div class="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-16">
+					<p class="text-[11px] font-bold uppercase tracking-[.2em] text-crimson">From the district</p>
+					<h2 id="social-heading" class="display-font mt-3 text-[29px] sm:text-[34px]">Follow along</h2>
+					<div class="mt-8 grid gap-8 lg:grid-cols-2">
+						<section class="border-t-2 border-ink" aria-labelledby="x-feed-heading">
+							<div class="flex items-center justify-between border-b border-slate/20 py-4">
+								<h3 id="x-feed-heading" class="text-[15px] font-bold">X / Twitter</h3>
+								<a href="https://x.com/GAGOP4th" target="_blank" rel="noopener noreferrer" class="text-[12px] font-semibold text-crimson hover:underline">Visit X <span aria-hidden="true">&#8599;</span></a>
+							</div>
+							<div class="flex min-h-[250px] flex-col items-center justify-center border-b border-slate/20 bg-paper px-6 text-center">
+								<a class='twitter-timeline' href='https://x.com/GAGOP4th?ref_src=twsrc%5Etfw'>Posts by GAGOP4th</a>
+								<script async src='https://platform.x.com/widgets.js' charset='utf-8'></script>
+							</div>
+						</section>
+						<section class="border-t-2 border-navy" aria-labelledby="facebook-feed-heading">
+							<div class="flex items-center justify-between border-b border-slate/20 py-4">
+								<h3 id="facebook-feed-heading" class="text-[15px] font-bold">Facebook</h3>
+								<a href="https://www.facebook.com/people/GA-4th-Congressional-District-Republican-Party/61591403381655/" target="_blank" rel="noopener noreferrer" class="text-[12px] font-semibold text-crimson hover:underline">Visit Facebook <span aria-hidden="true">&#8599;</span></a>
+							</div>
+							<div class="flex min-h-[250px] flex-col items-center justify-center border-b border-slate/20 bg-paper px-6 text-center">
+								<div id="fb-root"></div>
+								<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v23.0"></script>
+								<div class="fb-page" data-href="https://www.facebook.com/people/GA-4th-Congressional-District-Republican-Party/61591403381655/" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/people/GA-4th-Congressional-District-Republican-Party/61591403381655/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/people/GA-4th-Congressional-District-Republican-Party/61591403381655/">GA 4th Congressional District Republican Party</a></blockquote></div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<div id="sponsorship" class="section-view" data-view="sponsorship" hidden>
+			<section class="bg-ink text-white">
+				<div class="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-[76px]">
+					<p class="text-[11px] font-bold uppercase tracking-[.22em] text-white/60">Partner with the district</p>
+					<h1 class="display-font mt-4 text-[38px] leading-tight sm:text-[50px]">Sponsorship</h1>
+					<p class="mt-5 max-w-2xl text-[16px] leading-7 text-white/70">Support grassroots engagement across Georgia's 4th Congressional District and put your organization in front of our community.</p>
+				</div>
+				<div class="h-1 bg-crimson"></div>
+			</section>
+
+			<section class="bg-paper" aria-labelledby="sponsor-tiers-heading">
+				<div class="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-16">
+					<div class="max-w-2xl">
+						<p class="text-[11px] font-bold uppercase tracking-[.2em] text-crimson">Choose your level</p>
+						<h2 id="sponsor-tiers-heading" class="display-font mt-3 text-[29px] sm:text-[34px]">Make an impact. Earn recognition.</h2>
+						<p class="mt-4 text-[14px] leading-7 text-slate">Each annual sponsorship includes a place in our online sponsor showcase. Select a tier to start a conversation with our team.</p>
+					</div>
+
+					<div class="mt-9 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+						<article class="flex flex-col border-t-4 border-crimson bg-white p-6 shadow-sm">
+							<div class="flex items-center justify-between gap-3">
+								<h3 class="text-[13px] font-bold uppercase tracking-[.16em] text-crimson">Platinum</h3>
+								<span class="border border-crimson/20 bg-crimson/5 px-2 py-1 text-[9px] font-bold uppercase tracking-[.1em] text-crimson">Premier</span>
+							</div>
+							<p class="mt-4 text-[34px] font-bold tracking-tight">$2,500</p>
+							<p class="text-[12px] text-slate">per year</p>
+							<ul class="mt-5 space-y-3 border-t border-slate/15 pt-5 text-[13px] leading-5 text-slate">
+								<li><span class="mr-2 font-bold text-crimson" aria-hidden="true">&#10003;</span>Featured placement at the top of the sponsor showcase</li>
+								<li><span class="mr-2 font-bold text-crimson" aria-hidden="true">&#10003;</span>Largest linked logo display</li>
+								<li><span class="mr-2 font-bold text-crimson" aria-hidden="true">&#10003;</span>Recognition as a Platinum partner</li>
+							</ul>
+							<div class="mt-6 border border-crimson/20 bg-paper p-4 text-center">
+								<p class="text-[9px] font-bold uppercase tracking-[.14em] text-slate">Website recognition preview</p>
+								<div class="mt-3 flex min-h-16 items-center justify-center border-2 border-dashed border-crimson/35 bg-white px-3">
+									<span class="text-[12px] font-bold uppercase tracking-[.12em] text-ink">Your logo · Platinum</span>
+								</div>
+							</div>
+							<a href="mailto:info@ga04gagop.org?subject=Platinum%20Sponsorship%20Inquiry&body=I%27m%20interested%20in%20the%20annual%20Platinum%20sponsorship%20($2%2C500).%20Please%20contact%20me%20with%20next%20steps." class="mt-6 inline-flex min-h-11 items-center justify-center bg-crimson px-4 text-[11px] font-bold uppercase tracking-[.08em] text-white transition-colors hover:bg-red-700">Select Platinum</a>
+						</article>
+
+						<article class="flex flex-col border-t-4 border-[#b89a55] bg-white p-6 shadow-sm">
+							<h3 class="text-[13px] font-bold uppercase tracking-[.16em] text-ink">Gold</h3>
+							<p class="mt-4 text-[34px] font-bold tracking-tight">$1,000</p>
+							<p class="text-[12px] text-slate">per year</p>
+							<ul class="mt-5 space-y-3 border-t border-slate/15 pt-5 text-[13px] leading-5 text-slate">
+								<li><span class="mr-2 font-bold text-crimson" aria-hidden="true">&#10003;</span>Prominent placement in the sponsor showcase</li>
+								<li><span class="mr-2 font-bold text-crimson" aria-hidden="true">&#10003;</span>Large linked logo display</li>
+								<li><span class="mr-2 font-bold text-crimson" aria-hidden="true">&#10003;</span>Recognition as a Gold partner</li>
+							</ul>
+							<div class="mt-6 border border-slate/15 bg-paper p-4 text-center">
+								<p class="text-[9px] font-bold uppercase tracking-[.14em] text-slate">Website recognition preview</p>
+								<div class="mt-3 flex min-h-14 items-center justify-center border-2 border-dashed border-[#b89a55]/50 bg-white px-3">
+									<span class="text-[11px] font-bold uppercase tracking-[.1em] text-ink">Your logo · Gold</span>
+								</div>
+							</div>
+							<a href="mailto:info@ga04gagop.org?subject=Gold%20Sponsorship%20Inquiry&body=I%27m%20interested%20in%20the%20annual%20Gold%20sponsorship%20($1%2C000).%20Please%20contact%20me%20with%20next%20steps." class="mt-6 inline-flex min-h-11 items-center justify-center border border-ink px-4 text-[11px] font-bold uppercase tracking-[.08em] text-ink transition-colors hover:bg-ink hover:text-white">Select Gold</a>
+						</article>
+
+						<article class="flex flex-col border-t-4 border-slate/50 bg-white p-6 shadow-sm">
+							<h3 class="text-[13px] font-bold uppercase tracking-[.16em] text-ink">Silver</h3>
+							<p class="mt-4 text-[34px] font-bold tracking-tight">$500</p>
+							<p class="text-[12px] text-slate">per year</p>
+							<ul class="mt-5 space-y-3 border-t border-slate/15 pt-5 text-[13px] leading-5 text-slate">
+								<li><span class="mr-2 font-bold text-crimson" aria-hidden="true">&#10003;</span>Placement in the sponsor showcase</li>
+								<li><span class="mr-2 font-bold text-crimson" aria-hidden="true">&#10003;</span>Linked logo display</li>
+								<li><span class="mr-2 font-bold text-crimson" aria-hidden="true">&#10003;</span>Recognition as a Silver partner</li>
+							</ul>
+							<div class="mt-6 border border-slate/15 bg-paper p-4 text-center">
+								<p class="text-[9px] font-bold uppercase tracking-[.14em] text-slate">Website recognition preview</p>
+								<div class="mt-3 flex min-h-12 items-center justify-center border-2 border-dashed border-slate/30 bg-white px-3">
+									<span class="text-[10px] font-bold uppercase tracking-[.08em] text-ink">Your logo · Silver</span>
+								</div>
+							</div>
+							<a href="mailto:info@ga04gagop.org?subject=Silver%20Sponsorship%20Inquiry&body=I%27m%20interested%20in%20the%20annual%20Silver%20sponsorship%20($500).%20Please%20contact%20me%20with%20next%20steps." class="mt-6 inline-flex min-h-11 items-center justify-center border border-ink px-4 text-[11px] font-bold uppercase tracking-[.08em] text-ink transition-colors hover:bg-ink hover:text-white">Select Silver</a>
+						</article>
+
+						<article class="flex flex-col border-t-4 border-ink/35 bg-white p-6 shadow-sm">
+							<h3 class="text-[13px] font-bold uppercase tracking-[.16em] text-ink">Bronze</h3>
+							<p class="mt-4 text-[34px] font-bold tracking-tight">$250</p>
+							<p class="text-[12px] text-slate">per year</p>
+							<ul class="mt-5 space-y-3 border-t border-slate/15 pt-5 text-[13px] leading-5 text-slate">
+								<li><span class="mr-2 font-bold text-crimson" aria-hidden="true">&#10003;</span>Placement in the sponsor showcase</li>
+								<li><span class="mr-2 font-bold text-crimson" aria-hidden="true">&#10003;</span>Business name or logo display</li>
+								<li><span class="mr-2 font-bold text-crimson" aria-hidden="true">&#10003;</span>Recognition as a Bronze partner</li>
+							</ul>
+							<div class="mt-6 border border-slate/15 bg-paper p-4 text-center">
+								<p class="text-[9px] font-bold uppercase tracking-[.14em] text-slate">Website recognition preview</p>
+								<div class="mt-3 flex min-h-10 items-center justify-center border border-dashed border-slate/30 bg-white px-3">
+									<span class="text-[9px] font-bold uppercase tracking-[.06em] text-ink">Your name · Bronze</span>
+								</div>
+							</div>
+							<a href="mailto:info@ga04gagop.org?subject=Bronze%20Sponsorship%20Inquiry&body=I%27m%20interested%20in%20the%20annual%20Bronze%20sponsorship%20($250).%20Please%20contact%20me%20with%20next%20steps." class="mt-6 inline-flex min-h-11 items-center justify-center border border-ink px-4 text-[11px] font-bold uppercase tracking-[.08em] text-ink transition-colors hover:bg-ink hover:text-white">Select Bronze</a>
+						</article>
+					</div>
+					<p class="mt-6 text-[12px] leading-5 text-slate">Sponsorships are annual. Logo artwork and linking details will be coordinated after your inquiry. Contact <a class="font-semibold text-crimson hover:underline" href="mailto:info@ga04gagop.org">info@ga04gagop.org</a> with questions.</p>
+				</div>
+			</section>
+		</div>
+	</main>
+
+	<footer class="bg-ink text-white">
+		<div class="mx-auto grid max-w-7xl gap-8 px-5 py-10 sm:px-8 md:grid-cols-[1fr_auto] md:items-end">
+			<div>
+				<a href="index.html#home" class="inline-flex items-center gap-3" aria-label="GA-04 GAGOP home">
+					<img src="sMucHBX-_400x400.jpg" alt="GA-04 GAGOP Logo" class="h-8 w-8 shrink-0 rounded-full object-cover">
+					<span class="min-w-0">
+						<span class="block truncate text-[11px] font-semibold uppercase tracking-[.18em] text-white/65">Georgia Republicans</span>
+						<span class="block truncate text-[15px] font-bold tracking-[.04em]">4th Congressional District</span>
+					</span>
+				</a>
+				<p class="mt-4 text-[13px] text-white/70">Georgia's 4th Congressional District Republican Party</p>
+				<a class="mt-2 inline-block text-[13px] text-white/70 transition-colors hover:text-white" href="mailto:mediateam@gagop4th.us">mediateam@gagop4th.us</a>
+			</div>
+			<div class="text-[12px] leading-6 text-white/55 md:text-right">
+				<p>Paid for by the Georgia 4th Congressional District Republican Party.</p>
+				<p>&copy; 2026 GA-04 GAGOP. All rights reserved.</p>
+				<a class="transition-colors hover:text-white" href="urban-coalition.html">Urban Free-Market Coalition</a>
+			</div>
+		</div>
+	</footer>
+
+	<dialog id="newsletter-dialog" aria-labelledby="newsletter-heading" class="w-[min(92vw,32rem)] max-w-none border-0 bg-white p-0 text-ink shadow-2xl">
+		<div class="border-t-4 border-[#b30000] bg-ink px-6 py-4 text-white sm:px-8">
+			<div class="flex items-center justify-between gap-6">
+				<p class="text-[11px] font-bold uppercase tracking-[.2em] text-white/75">GA-04 GAGOP · Stay connected</p>
+				<button type="button" data-newsletter-close aria-label="Close newsletter signup" class="flex h-8 w-8 items-center justify-center text-2xl leading-none text-white/75 transition-colors hover:text-white">&times;</button>
+			</div>
+		</div>
+		<div class="px-6 py-7 sm:px-8">
+			<h2 id="newsletter-heading" class="display-font text-[27px] leading-snug">Subscribe to our newsletter</h2>
+			<p class="mt-3 text-[14px] leading-6 text-slate">Get district news, upcoming events, and ways to get involved delivered to your inbox.</p>
+			<div class="ml-embedded mt-6" data-form="ndFDap"></div>
+			<noscript>
+				<p class="mt-5 text-[13px] leading-6 text-slate">To sign up, visit our <a class="font-semibold text-crimson underline" href="https://preview.mailerlite.io/forms/2691461/200993383578076901/share">newsletter signup page</a>.</p>
+			</noscript>
+		</div>
+	</dialog>
+
+	<dialog id="coming-soon-dialog" aria-labelledby="coming-soon-heading" class="w-[min(92vw,32rem)] max-w-none border-0 border-t-4 border-[#b30000] bg-white p-0 text-ink shadow-2xl">
+		<div class="bg-ink px-6 py-4 text-white sm:px-8">
+			<div class="flex items-center justify-between gap-6">
+				<p class="text-[11px] font-bold uppercase tracking-[.2em] text-white/75">GA-04 GAGOP</p>
+				<button type="button" data-coming-soon-close aria-label="Close Coming Soon dialog" class="flex h-8 w-8 items-center justify-center text-2xl leading-none text-white/75 transition-colors hover:text-white">&times;</button>
+			</div>
+		</div>
+		<div class="px-6 py-7 sm:px-8">
+			<h2 id="coming-soon-heading" class="display-font text-[27px] leading-snug">Coming Soon!</h2>
+			<p class="mt-3 text-[14px] leading-6 text-slate">Our online donation and merchandise platforms are launching shortly.</p>
+			<div class="mt-5 border-t border-slate/15 pt-5">
+				<p class="text-[13px] font-semibold text-ink">Stay updated by subscribing to our newsletter.</p>
+				<div class="ml-embedded mt-4" data-form="ndFDap"></div>
+			</div>
+			<button type="button" data-coming-soon-close class="mt-5 inline-flex min-h-10 items-center justify-center border border-ink px-5 text-[11px] font-bold uppercase tracking-[.08em] text-ink transition-colors hover:bg-ink hover:text-white">Got it</button>
+		</div>
+	</dialog>
+
+	<script>
+		const views = document.querySelectorAll('[data-view]');
+		const navLinks = document.querySelectorAll('.nav-link');
+		const newsletterDialog = document.getElementById('newsletter-dialog');
+		const comingSoonDialog = document.getElementById('coming-soon-dialog');
+		const newsletterShownKey = 'ga04gagop-newsletter-shown';
+
+		document.querySelectorAll('[data-newsletter-open]').forEach((button) => {
+			button.addEventListener('click', () => openNewsletterDialog());
+		});
+		document.querySelectorAll('[data-newsletter-close]').forEach((button) => {
+			button.addEventListener('click', () => newsletterDialog.close());
+		});
+		newsletterDialog.addEventListener('click', (event) => {
+			if (event.target === newsletterDialog) {
+				newsletterDialog.close();
+			}
+		});
+		document.querySelectorAll('[data-coming-soon-open]').forEach((link) => {
+			link.addEventListener('click', (event) => {
+				event.preventDefault();
+				comingSoonDialog.showModal();
+			});
+		});
+		document.querySelectorAll('[data-coming-soon-close]').forEach((button) => {
+			button.addEventListener('click', () => comingSoonDialog.close());
+		});
+		comingSoonDialog.addEventListener('click', (event) => {
+			if (event.target === comingSoonDialog) {
+				comingSoonDialog.close();
+			}
+		});
+
+		function openNewsletterDialog() {
+			if (newsletterDialog.open) return;
+
+			newsletterDialog.showModal();
+			try {
+				window.localStorage.setItem(newsletterShownKey, 'true');
+			} catch (error) {
+				console.error('Unable to save the newsletter modal display state.', error);
+			}
+		}
+
+		window.setTimeout(() => {
+			try {
+				if (window.localStorage.getItem(newsletterShownKey) !== 'true') {
+					openNewsletterDialog();
+				}
+			} catch (error) {
+				console.error('Unable to read the newsletter modal display state.', error);
+				openNewsletterDialog();
+			}
+		}, 2000);
+
+		function showView() {
+			const requestedView = window.location.hash.slice(1);
+			const activeView = ['news', 'sponsorship'].includes(requestedView) ? requestedView : 'home';
+			views.forEach((view) => {
+				view.hidden = view.dataset.view !== activeView;
+			});
+			navLinks.forEach((link) => {
+				if (link.hash === `#${activeView}`) {
+					link.setAttribute('aria-current', 'page');
+				} else {
+					link.removeAttribute('aria-current');
+				}
+			});
+			window.scrollTo(0, 0);
+		}
+
+		window.addEventListener('hashchange', showView);
+		showView();
+	</script>
+</body>
+</html>
