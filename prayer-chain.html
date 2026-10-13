@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#102a43">
+	<meta name="description" content="Join the Fourth Congressional District Faith Coalition Election Day Prayer Chain on November 3.">
+	<title>Election Day Prayer Chain | GA-04 GAGOP</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+	<style>
+		:root {
+			color-scheme: light;
+			--ink: #102a43;
+			--navy: #173b5e;
+			--crimson: #c5282f;
+			--gold: #b89a55;
+			--emerald: #18704f;
+			--paper: #f6f7f8;
+			--mist: #e7edf1;
+			--slate: #536575;
+		}
+		* { box-sizing: border-box; }
+		html { scroll-behavior: smooth; }
+		body { margin: 0; color: var(--ink); background: #fff; font-family: 'DM Sans', sans-serif; -webkit-font-smoothing: antialiased; }
+		a { color: inherit; }
+		button, input { font: inherit; }
+		button { cursor: pointer; }
+		.display-font { font-family: 'Libre Baskerville', Georgia, serif; }
+		.skip-link { position: absolute; left: -9999px; top: 1rem; z-index: 60; background: #fff; padding: .75rem 1rem; }
+		.skip-link:focus { left: 1rem; }
+		.site-header, .site-footer { background: var(--ink); color: white; }
+		.site-header { position: sticky; top: 0; z-index: 5; border-bottom: 1px solid rgb(255 255 255 / 10%); }
+		.header-inner, .footer-inner, .content-width { width: min(100% - 2.5rem, 80rem); margin: 0 auto; }
+		.header-inner { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding: .75rem 0; }
+		.brand { display: inline-flex; align-items: center; gap: .75rem; text-decoration: none; }
+		.brand img { width: 2rem; height: 2rem; border-radius: 50%; object-fit: cover; }
+		.brand-small { display: block; color: rgb(255 255 255 / 65%); font-size: .6875rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; }
+		.brand-name { display: block; margin-top: .15rem; font-size: .9375rem; font-weight: 700; letter-spacing: .04em; }
+		.main-nav { display: flex; align-items: center; gap: 1.5rem; }
+		.nav-link { color: rgb(255 255 255 / 72%); font-size: .8125rem; font-weight: 600; text-decoration: none; }
+		.nav-link:hover, .nav-link:focus-visible { color: #fff; }
+		.nav-link::after { display: block; height: 2px; margin-top: 5px; background: var(--crimson); content: ''; transform: scaleX(0); transform-origin: left; transition: transform .2s ease; }
+		.nav-link:hover::after, .nav-link:focus-visible::after { transform: scaleX(1); }
+		.hero { background: var(--ink); color: #fff; }
+		.hero-inner { width: min(100% - 2.5rem, 80rem); margin: 0 auto; padding: clamp(3.5rem, 8vw, 6.5rem) 0; }
+		.eyebrow { margin: 0; color: rgb(255 255 255 / 65%); font-size: .7rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+		h1 { max-width: 850px; margin: 1.15rem 0 0; font-size: clamp(2rem, 5.5vw, 3.35rem); line-height: 1.2; }
+		.hero-copy { max-width: 700px; margin: 1.5rem 0 0; color: rgb(255 255 255 / 78%); font-size: 1.05rem; line-height: 1.8; }
+		.hero-rule { height: 4px; background: var(--crimson); }
+		.schedule-section { background: var(--paper); }
+		.schedule-inner { width: min(100% - 2.5rem, 80rem); margin: 0 auto; padding: clamp(2.75rem, 6vw, 5rem) 0; }
+		.schedule-heading { display: flex; align-items: end; justify-content: space-between; gap: 1.5rem; margin-bottom: 1.5rem; }
+		.section-kicker { margin: 0; color: var(--emerald); font-size: .7rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+		h2 { margin: .65rem 0 0; font-size: clamp(1.5rem, 4vw, 2rem); }
+		.instructions { max-width: 660px; margin: .8rem 0 0; color: var(--slate); font-size: .9rem; line-height: 1.7; }
+		.primary-button {
+			min-height: 44px; border: 0; padding: .75rem 1rem; font-size: .75rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+		}
+		.notice { display: flex; gap: .7rem; margin: 1.5rem 0; border-left: 3px solid var(--gold); background: #fff; padding: .9rem 1rem; color: var(--slate); font-size: .8rem; line-height: 1.6; }
+		.notice strong { color: var(--ink); }
+		.success-message { margin: 1.25rem 0; border-left: 4px solid var(--emerald); background: #eaf4ef; padding: 1rem 1.25rem; color: #14583e; font-size: .9rem; line-height: 1.6; }
+		.success-message[hidden] { display: none; }
+		.legend { display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.25rem 0; color: var(--slate); font-size: .8rem; }
+		.legend-item { display: inline-flex; align-items: center; gap: .45rem; }
+		.legend-dot { width: .7rem; height: .7rem; border-radius: 50%; background: var(--emerald); }
+		.legend-dot.filled { background: var(--gold); }
+		.slot-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .75rem; }
+		.slot { min-width: 0; min-height: 104px; border: 1px solid #d7e0e6; border-top: 3px solid var(--emerald); background: #fff; padding: .8rem; color: var(--ink); text-align: left; transition: border-color .15s, box-shadow .15s, transform .15s; }
+		.slot:hover, .slot:focus-visible { border-color: var(--emerald); box-shadow: 0 4px 14px rgb(16 42 67 / 10%); transform: translateY(-1px); }
+		.slot.filled { border-top-color: var(--gold); background: #fbfaf6; cursor: default; }
+		.slot-time { display: block; font-size: .9rem; font-weight: 700; line-height: 1.4; }
+		.slot-name { display: block; margin-top: .35rem; overflow-wrap: anywhere; color: var(--slate); font-size: .75rem; }
+		.slot-status { display: inline-flex; align-items: center; gap: .4rem; margin-top: .65rem; color: var(--emerald); font-size: .72rem; font-weight: 700; }
+		.slot.filled .slot-status { color: #80651f; }
+		.slot-status::before { width: .5rem; height: .5rem; border-radius: 50%; background: currentColor; content: ''; }
+		.site-footer { border-top: 4px solid var(--crimson); }
+		.footer-inner { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 2rem; padding: 2.5rem 0; }
+		.footer-inner p, .footer-inner a { color: rgb(255 255 255 / 65%); font-size: .8rem; line-height: 1.6; }
+		.footer-inner p { margin: 1rem 0 0; }
+		.footer-inner .footer-contact { display: inline-block; margin-top: .45rem; text-decoration: none; }
+		.footer-meta { color: rgb(255 255 255 / 55%); font-size: .75rem; line-height: 1.8; text-align: right; }
+		.footer-meta p { margin: 0; font-size: inherit; }
+		.footer-meta a { text-decoration: none; }
+		.footer-meta a:hover, .footer-contact:hover { color: #fff; }
+		dialog { width: min(92vw, 34rem); max-width: none; max-height: min(88vh, 48rem); overflow: auto; border: 0; border-top: 4px solid var(--crimson); padding: 0; color: var(--ink); box-shadow: 0 20px 60px rgb(0 0 0 / 25%); }
+		dialog::backdrop { background: rgb(16 42 67 / 72%); }
+		.dialog-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; background: var(--ink); padding: 1rem 1.5rem; color: #fff; }
+		.dialog-header p { margin: 0; color: rgb(255 255 255 / 72%); font-size: .7rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+		.close-button { width: 2rem; height: 2rem; border: 0; background: none; color: #fff; font-size: 1.7rem; line-height: 1; }
+		.dialog-body { padding: 1.5rem; }
+		.dialog-body h2 { margin: 0; font-family: 'Libre Baskerville', Georgia, serif; font-size: 1.55rem; line-height: 1.35; }
+		.dialog-description { margin: .7rem 0 1.25rem; color: var(--slate); font-size: .85rem; line-height: 1.65; }
+		.field { display: grid; gap: .4rem; margin-top: 1rem; }
+		.field label { font-size: .8rem; font-weight: 700; }
+		.field input { width: 100%; min-height: 46px; border: 1px solid #cbd5dc; border-radius: 0; padding: .7rem .75rem; color: var(--ink); }
+		.field input:focus { outline: 2px solid var(--navy); outline-offset: 1px; }
+		.primary-button { width: 100%; margin-top: 1.25rem; background: var(--ink); color: #fff; }
+		.primary-button:hover { background: var(--navy); }
+		.form-error { min-height: 1.25rem; margin: .6rem 0 0; color: #a32229; font-size: .8rem; }
+		@media (max-width: 760px) {
+			.header-inner { align-items: flex-start; flex-direction: column; gap: .75rem; }
+			.main-nav { width: 100%; justify-content: space-between; gap: .75rem; }
+			.slot-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+		}
+		@media (max-width: 520px) {
+			.header-inner, .footer-inner, .content-width, .hero-inner, .schedule-inner { width: min(100% - 2rem, 80rem); }
+			.main-nav { justify-content: flex-start; gap: 1.1rem; }
+			.schedule-heading { align-items: flex-start; flex-direction: column; }
+			.slot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .55rem; }
+			.slot { min-height: 92px; padding: .7rem; }
+			.slot-time { font-size: .82rem; }
+			.footer-inner { grid-template-columns: 1fr; align-items: start; gap: 1.5rem; }
+			.footer-meta { text-align: left; }
+			.dialog-body { padding: 1.25rem; }
+		}
+		@media (prefers-reduced-motion: reduce) {
+			html { scroll-behavior: auto; }
+			*, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+		}
+	</style>
+</head>
+<body>
+	<a class="skip-link" href="#main">Skip to content</a>
+	<header class="site-header">
+		<div class="header-inner">
+			<a class="brand" href="index.html#home" aria-label="GA-04 GAGOP home">
+				<img src="sMucHBX-_400x400.jpg" alt="GA-04 GAGOP logo">
+				<span><span class="brand-small">Georgia Republicans</span><span class="brand-name">4th Congressional District</span></span>
+			</a>
+			<nav class="main-nav" aria-label="Main navigation">
+				<a class="nav-link" href="index.html#home">Home</a>
+				<a class="nav-link" href="index.html#news">News &amp; Events</a>
+				<a class="nav-link" href="sponsorship.html">Sponsorship</a>
+			</nav>
+		</div>
+	</header>
+
+	<main id="main">
+		<section class="hero" aria-labelledby="page-title">
+			<div class="hero-inner">
+				<p class="eyebrow">Fourth Congressional District Faith Coalition</p>
+				<h1 class="display-font" id="page-title">Election Day Prayer Chain</h1>
+				<p class="hero-copy">Join us in prayer on November 3. Choose a 15-minute time to pray for our community, our neighbors, and our nation throughout Election Day.</p>
+			</div>
+			<div class="hero-rule"></div>
+		</section>
+
+		<section class="schedule-section" aria-labelledby="schedule-title">
+			<div class="schedule-inner">
+				<div class="schedule-heading">
+					<div>
+						<p class="section-kicker">November 3 · Eastern Time</p>
+						<h2 class="display-font" id="schedule-title">Choose your prayer time</h2>
+						<p class="instructions">Select any available time to reserve your 15-minute prayer commitment. The chain runs continuously from 7:00 AM to 7:00 PM EST.</p>
+					</div>
+				</div>
+				<p class="notice"><span aria-hidden="true">✦</span><span><strong>Sign up for a prayer time:</strong> Your registration is submitted securely through Formspree. A slot marked filled here reflects a sign-up made during this visit; availability is not shared or synchronized across visitors.</span></p>
+				<p class="success-message" id="signup-success" role="status" aria-live="polite" tabindex="-1" hidden></p>
+				<div class="legend" aria-label="Schedule status key">
+					<span class="legend-item"><span class="legend-dot" aria-hidden="true"></span>Available</span>
+					<span class="legend-item"><span class="legend-dot filled" aria-hidden="true"></span>Filled</span>
+				</div>
+				<div class="slot-grid" id="slot-grid" aria-live="polite"></div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="footer-inner">
+			<div>
+				<a class="brand" href="index.html#home" aria-label="GA-04 GAGOP home">
+					<img src="sMucHBX-_400x400.jpg" alt="GA-04 GAGOP logo">
+					<span><span class="brand-small">Georgia Republicans</span><span class="brand-name">4th Congressional District</span></span>
+				</a>
+				<p>Georgia's 4th Congressional District Republican Party</p>
+				<a class="footer-contact" href="mailto:mediateam@gagop4th.us">mediateam@gagop4th.us</a>
+			</div>
+			<div class="footer-meta">
+				<p>Paid for by the Georgia 4th Congressional District Republican Party.</p>
+				<p>&copy; 2026 GA-04 GAGOP. All rights reserved.</p>
+				<a href="urban-coalition.html">Urban Free-Market Coalition</a>
+			</div>
+		</div>
+	</footer>
+
+	<dialog id="signup-dialog" aria-labelledby="signup-title">
+		<div class="dialog-header">
+			<p>GA-04 GAGOP · Prayer Chain</p>
+			<button class="close-button" type="button" data-close="signup-dialog" aria-label="Close signup">&times;</button>
+		</div>
+		<div class="dialog-body">
+			<h2 id="signup-title">Reserve your time</h2>
+			<p class="dialog-description" id="selected-slot-label"></p>
+			<form id="signup-form">
+				<div class="field">
+					<label for="full-name">Full name</label>
+					<input id="full-name" name="name" autocomplete="name" maxlength="120" required>
+				</div>
+				<div class="field">
+					<label for="email-address">Email address</label>
+					<input id="email-address" name="email" type="email" autocomplete="email" maxlength="254" required>
+				</div>
+				<p class="form-error" id="signup-error" role="alert"></p>
+				<button class="primary-button" id="signup-submit" type="submit">Reserve this time</button>
+			</form>
+		</div>
+	</dialog>
+
+	<script>
+		(function () {
+			'use strict';
+			const slotGrid = document.getElementById('slot-grid');
+			const signupDialog = document.getElementById('signup-dialog');
+			const signupForm = document.getElementById('signup-form');
+			const signupSubmit = document.getElementById('signup-submit');
+			const signupError = document.getElementById('signup-error');
+			const signupSuccess = document.getElementById('signup-success');
+			let selectedSlot = null;
+			const reservations = {};
+
+			function formatTime(minutes) {
+				const hour24 = Math.floor(minutes / 60);
+				const minute = minutes % 60;
+				const suffix = hour24 < 12 ? 'AM' : 'PM';
+				const hour12 = hour24 % 12 || 12;
+				return hour12 + ':' + String(minute).padStart(2, '0') + ' ' + suffix;
+			}
+
+			function slotLabel(index) {
+				const start = 7 * 60 + index * 15;
+				return formatTime(start) + ' – ' + formatTime(start + 15) + ' EST';
+			}
+
+			function renderSlots() {
+				slotGrid.replaceChildren();
+				for (let index = 0; index < 48; index += 1) {
+					const reservation = reservations[index];
+					const filled = Boolean(reservation);
+					const slot = document.createElement('button');
+					slot.type = 'button';
+					slot.className = 'slot' + (filled ? ' filled' : '');
+					slot.disabled = filled;
+					slot.setAttribute('aria-label', slotLabel(index) + (filled ? ', filled' : ', available. Select to sign up.'));
+					const time = document.createElement('span');
+					time.className = 'slot-time';
+					time.textContent = slotLabel(index);
+					const status = document.createElement('span');
+					status.className = 'slot-status';
+					status.textContent = filled ? 'Filled' : 'Available';
+					slot.append(time, status);
+					if (filled) {
+						const volunteer = document.createElement('span');
+						volunteer.className = 'slot-name';
+						volunteer.textContent = reservation.name;
+						slot.append(volunteer);
+					}
+					if (!filled) {
+						slot.addEventListener('click', function () {
+							selectedSlot = index;
+							document.getElementById('selected-slot-label').textContent = slotLabel(index);
+							signupError.textContent = '';
+							signupForm.reset();
+							signupDialog.showModal();
+							document.getElementById('full-name').focus();
+						});
+					}
+					slotGrid.append(slot);
+				}
+			}
+
+			signupForm.addEventListener('submit', async function (event) {
+				event.preventDefault();
+				if (selectedSlot === null) return;
+				if (reservations[selectedSlot]) {
+					signupError.textContent = 'That time was just reserved. Please choose another available slot.';
+					renderSlots();
+					return;
+				}
+				const formData = new FormData(signupForm);
+				const name = String(formData.get('name') || '').trim();
+				const email = String(formData.get('email') || '').trim();
+				if (!name || !email) {
+					signupError.textContent = 'Enter your full name and email address.';
+					return;
+				}
+				const submittedSlot = selectedSlot;
+				if (signupSubmit.disabled) return;
+				const submission = new FormData();
+				submission.append('name', name);
+				submission.append('email', email);
+				submission.append('_replyto', email);
+				submission.append('_subject', 'Election Day Prayer Chain sign-up');
+				submission.append('event', 'Fourth Congressional District Faith Coalition Election Day Prayer Chain');
+				submission.append('date', 'November 3');
+				submission.append('prayer_slot', slotLabel(submittedSlot));
+				signupSubmit.disabled = true;
+				signupSubmit.textContent = 'Submitting…';
+				signupError.textContent = '';
+				try {
+					const response = await fetch('https://formspree.io/f/mgaolqyr', {
+						method: 'POST',
+						body: submission,
+						headers: { Accept: 'application/json' }
+					});
+					if (!response.ok) {
+						throw new Error('Formspree could not accept your sign-up (HTTP ' + response.status + '). Please try again.');
+					}
+				} catch (error) {
+					signupError.textContent = error.message || 'Your sign-up could not be submitted. Check your connection and try again.';
+					return;
+				} finally {
+					signupSubmit.disabled = false;
+					signupSubmit.textContent = 'Reserve this time';
+				}
+				reservations[submittedSlot] = { name: name, email: email };
+				signupDialog.close();
+				selectedSlot = null;
+				renderSlots();
+				signupSuccess.textContent = 'Thank you, ' + name + '! Your prayer time (' + slotLabel(submittedSlot) + ') was submitted successfully.';
+				signupSuccess.hidden = false;
+				signupSuccess.focus();
+			});
+			document.querySelectorAll('[data-close]').forEach(function (button) {
+				button.addEventListener('click', function () {
+					document.getElementById(button.dataset.close).close();
+				});
+			});
+			signupDialog.addEventListener('click', function (event) {
+				if (event.target === signupDialog) signupDialog.close();
+			});
+			renderSlots();
+		}());
+	</script>
+</body>
+</html>
