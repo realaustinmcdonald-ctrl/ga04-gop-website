@@ -218,7 +218,7 @@
 			const signupError = document.getElementById('signup-error');
 			const signupSuccess = document.getElementById('signup-success');
 			let selectedSlot = null;
-			const reservations = {};
+			const prefilledSlots = new Set([0]);
 
 			function formatTime(minutes) {
 				const hour24 = Math.floor(minutes / 60);
@@ -236,8 +236,7 @@
 			function renderSlots() {
 				slotGrid.replaceChildren();
 				for (let index = 0; index < 48; index += 1) {
-					const reservation = reservations[index];
-					const filled = Boolean(reservation);
+					const filled = prefilledSlots.has(index);
 					const slot = document.createElement('button');
 					slot.type = 'button';
 					slot.className = 'slot' + (filled ? ' filled' : '');
@@ -250,12 +249,6 @@
 					status.className = 'slot-status';
 					status.textContent = filled ? 'Filled' : 'Available';
 					slot.append(time, status);
-					if (filled) {
-						const volunteer = document.createElement('span');
-						volunteer.className = 'slot-name';
-						volunteer.textContent = reservation.name;
-						slot.append(volunteer);
-					}
 					if (!filled) {
 						slot.addEventListener('click', function () {
 							selectedSlot = index;
@@ -273,7 +266,7 @@
 			signupForm.addEventListener('submit', async function (event) {
 				event.preventDefault();
 				if (selectedSlot === null) return;
-				if (reservations[selectedSlot]) {
+				if (prefilledSlots.has(selectedSlot)) {
 					signupError.textContent = 'That time was just reserved. Please choose another available slot.';
 					renderSlots();
 					return;
@@ -314,7 +307,7 @@
 					signupSubmit.disabled = false;
 					signupSubmit.textContent = 'Reserve this time';
 				}
-				reservations[submittedSlot] = { name: name, email: email };
+				prefilledSlots.add(submittedSlot);
 				signupDialog.close();
 				selectedSlot = null;
 				renderSlots();
