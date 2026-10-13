@@ -67,11 +67,11 @@
 		.slot-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .75rem; }
 		.slot { min-width: 0; min-height: 104px; border: 1px solid #d7e0e6; border-top: 3px solid var(--emerald); background: #fff; padding: .8rem; color: var(--ink); text-align: left; transition: border-color .15s, box-shadow .15s, transform .15s; }
 		.slot:hover, .slot:focus-visible { border-color: var(--emerald); box-shadow: 0 4px 14px rgb(16 42 67 / 10%); transform: translateY(-1px); }
-		.slot.filled { border-top-color: var(--gold); background: #fbfaf6; cursor: default; }
+		.slot.filled { border-color: #cbd3d8; border-top-color: #87939b; background: #eef1f3; color: #71808b; cursor: default; }
 		.slot-time { display: block; font-size: .9rem; font-weight: 700; line-height: 1.4; }
 		.slot-name { display: block; margin-top: .35rem; overflow-wrap: anywhere; color: var(--slate); font-size: .75rem; }
 		.slot-status { display: inline-flex; align-items: center; gap: .4rem; margin-top: .65rem; color: var(--emerald); font-size: .72rem; font-weight: 700; }
-		.slot.filled .slot-status { color: #80651f; }
+		.slot.filled .slot-status { color: var(--gold); }
 		.slot-status::before { width: .5rem; height: .5rem; border-radius: 50%; background: currentColor; content: ''; }
 		.site-footer { border-top: 4px solid var(--crimson); }
 		.footer-inner { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 2rem; padding: 2.5rem 0; }
@@ -215,7 +215,7 @@
 			const signupError = document.getElementById('signup-error');
 			const signupSuccess = document.getElementById('signup-success');
 			let selectedSlot = null;
-			const prefilledSlots = new Set([0, 1, 2]);
+			const prefilledSlots = new Set([0, 1, 2, 8]);
 
 			function formatTime(minutes) {
 				const hour24 = Math.floor(minutes / 60);
