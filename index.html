@@ -97,6 +97,34 @@
 				<div class="absolute bottom-0 left-0 right-0 h-1 bg-crimson"></div>
 			</section>
 
+			<section class="bg-paper px-5 py-12 sm:px-8 sm:py-16" aria-labelledby="election-countdown-heading">
+				<div class="mx-auto max-w-5xl rounded-2xl border border-slate/20 border-t-4 border-t-[#C5282F] bg-white p-5 shadow-sm sm:p-8">
+					<div class="text-center">
+						<p class="text-[11px] font-bold uppercase tracking-[.2em] text-crimson">November 3, 2026 · 7:00 AM EST</p>
+						<h2 id="election-countdown-heading" class="display-font mt-3 text-[24px] leading-snug sm:text-[30px]">Countdown to Election Day</h2>
+					</div>
+					<div id="election-countdown" class="mt-6 grid grid-cols-2 gap-3 sm:mt-8 sm:grid-cols-4 sm:gap-4" role="timer" aria-label="Time remaining until Election Day" aria-live="off" data-target="2026-11-03T07:00:00-05:00">
+						<div class="rounded-xl border border-slate/20 bg-paper px-2 py-4 text-center sm:py-5">
+							<span class="block text-[32px] font-bold leading-none tabular-nums text-[#C5282F] sm:text-[40px]" data-countdown-days>--</span>
+							<span class="mt-2 block text-[10px] font-bold uppercase tracking-[.15em] text-slate sm:text-[11px]">Days</span>
+						</div>
+						<div class="rounded-xl border border-slate/20 bg-paper px-2 py-4 text-center sm:py-5">
+							<span class="block text-[32px] font-bold leading-none tabular-nums text-[#C5282F] sm:text-[40px]" data-countdown-hours>--</span>
+							<span class="mt-2 block text-[10px] font-bold uppercase tracking-[.15em] text-slate sm:text-[11px]">Hours</span>
+						</div>
+						<div class="rounded-xl border border-slate/20 bg-paper px-2 py-4 text-center sm:py-5">
+							<span class="block text-[32px] font-bold leading-none tabular-nums text-[#C5282F] sm:text-[40px]" data-countdown-minutes>--</span>
+							<span class="mt-2 block text-[10px] font-bold uppercase tracking-[.15em] text-slate sm:text-[11px]">Minutes</span>
+						</div>
+						<div class="rounded-xl border border-slate/20 bg-paper px-2 py-4 text-center sm:py-5">
+							<span class="block text-[32px] font-bold leading-none tabular-nums text-[#C5282F] sm:text-[40px]" data-countdown-seconds>--</span>
+							<span class="mt-2 block text-[10px] font-bold uppercase tracking-[.15em] text-slate sm:text-[11px]">Seconds</span>
+						</div>
+					</div>
+					<p id="election-countdown-complete" class="mt-5 text-center text-[13px] font-semibold text-crimson" role="status" aria-live="polite" hidden>Election Day is here.</p>
+				</div>
+			</section>
+
 			<section class="bg-paper">
 				<div class="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[.8fr_1.2fr] lg:gap-20">
 					<div>
@@ -416,6 +444,43 @@
 	</dialog>
 
 	<script>
+		const electionCountdown = document.getElementById('election-countdown');
+		const electionCountdownComplete = document.getElementById('election-countdown-complete');
+		const electionCountdownTarget = Date.parse(electionCountdown.dataset.target);
+		const electionCountdownUnits = {
+			days: electionCountdown.querySelector('[data-countdown-days]'),
+			hours: electionCountdown.querySelector('[data-countdown-hours]'),
+			minutes: electionCountdown.querySelector('[data-countdown-minutes]'),
+			seconds: electionCountdown.querySelector('[data-countdown-seconds]')
+		};
+		let electionCountdownInterval = null;
+
+		function updateElectionCountdown() {
+			const remainingSeconds = Math.max(0, Math.floor((electionCountdownTarget - Date.now()) / 1000));
+			const values = {
+				days: Math.floor(remainingSeconds / 86400),
+				hours: Math.floor((remainingSeconds % 86400) / 3600),
+				minutes: Math.floor((remainingSeconds % 3600) / 60),
+				seconds: remainingSeconds % 60
+			};
+
+			Object.entries(values).forEach(([unit, value]) => {
+				electionCountdownUnits[unit].textContent = String(value).padStart(2, '0');
+			});
+
+			if (remainingSeconds === 0) {
+				electionCountdownComplete.hidden = false;
+				if (electionCountdownInterval !== null) {
+					window.clearInterval(electionCountdownInterval);
+				}
+			}
+		}
+
+		updateElectionCountdown();
+		if (Date.now() < electionCountdownTarget) {
+			electionCountdownInterval = window.setInterval(updateElectionCountdown, 1000);
+		}
+
 		const views = document.querySelectorAll('[data-view]');
 		const navLinks = document.querySelectorAll('.nav-link');
 		const newsletterDialog = document.getElementById('newsletter-dialog');
