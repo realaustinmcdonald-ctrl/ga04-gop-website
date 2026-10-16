@@ -41,6 +41,8 @@
 		.main-nav { display: flex; align-items: center; gap: 1.5rem; }
 		.nav-link { color: rgb(255 255 255 / 72%); font-size: .8125rem; font-weight: 600; text-decoration: none; }
 		.nav-link:hover, .nav-link:focus-visible { color: #fff; }
+		.donate-nav-button { min-height: 40px; border: 0; background: var(--crimson); padding: .65rem 1rem; color: #fff; font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+		.donate-nav-button:hover, .donate-nav-button:focus-visible { background: #a91f26; }
 		.nav-link::after { display: block; height: 2px; margin-top: 5px; background: var(--crimson); content: ''; transform: scaleX(0); transform-origin: left; transition: transform .2s ease; }
 		.nav-link:hover::after, .nav-link:focus-visible::after { transform: scaleX(1); }
 		.hero { background: var(--ink); color: #fff; }
@@ -97,6 +99,14 @@
 		.primary-button { width: 100%; margin-top: 1.25rem; background: var(--ink); color: #fff; }
 		.primary-button:hover { background: var(--navy); }
 		.form-error { min-height: 1.25rem; margin: .6rem 0 0; color: #a32229; font-size: .8rem; }
+		.donate-modal { position: fixed; inset: 0; z-index: 50; display: none; align-items: center; justify-content: center; overflow-y: auto; background: rgb(0 0 0 / 60%); padding: 1rem; backdrop-filter: blur(4px); }
+		.donate-modal.open { display: flex; }
+		.donate-modal-card { width: 100%; max-width: 42rem; max-height: 90vh; overflow-y: auto; margin: 2rem auto; border-top: 4px solid var(--crimson); border-radius: 1rem; background: #fff; padding: 1.5rem; box-shadow: 0 25px 50px rgb(0 0 0 / 25%); }
+		.donate-modal-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; margin-bottom: 1.5rem; }
+		.donate-modal-header h2 { margin: 0; font-family: 'Libre Baskerville', Georgia, serif; font-size: 1.5rem; line-height: 1.4; }
+		.donate-modal-close { display: flex; width: 2.25rem; height: 2.25rem; flex-shrink: 0; align-items: center; justify-content: center; border: 0; border-radius: 50%; background: transparent; color: var(--slate); font-size: 1.6rem; line-height: 1; }
+		.donate-modal-close:hover, .donate-modal-close:focus-visible { background: var(--mist); color: var(--ink); }
+		@media (min-width: 640px) { .donate-modal-card { padding: 2.5rem; } }
 		@media (max-width: 760px) {
 			.header-inner { align-items: flex-start; flex-direction: column; gap: .75rem; }
 			.main-nav { width: 100%; justify-content: space-between; gap: .75rem; }
@@ -131,6 +141,7 @@
 				<a class="nav-link" href="index.html#home">Home</a>
 				<a class="nav-link" href="index.html#news">News &amp; Events</a>
 				<a class="nav-link" href="sponsorship.html">Sponsorship</a>
+				<button type="button" class="donate-nav-button" data-donate-modal-open>Donate</button>
 			</nav>
 		</div>
 	</header>
@@ -182,6 +193,16 @@
 		</div>
 	</footer>
 
+	<div id="donate-modal" class="donate-modal" role="dialog" aria-modal="true" aria-labelledby="donate-modal-heading" tabindex="-1">
+		<div class="donate-modal-card">
+			<div class="donate-modal-header">
+				<h2 id="donate-modal-heading">Support Georgia's 4th District GOP</h2>
+				<button type="button" class="donate-modal-close" data-donate-modal-close aria-label="Close donation form">&times;</button>
+			</div>
+			<script src="https://www.cognitoforms.com/f/seamless.js" data-key="CLzgixDg4E2d6LUF6WqoKg" data-form="1"></script>
+		</div>
+	</div>
+
 	<dialog id="signup-dialog" aria-labelledby="signup-title">
 		<div class="dialog-header">
 			<p>GA-04 GAGOP · Prayer Chain</p>
@@ -204,6 +225,35 @@
 			</form>
 		</div>
 	</dialog>
+
+	<script>
+		(function () {
+			var donateModal = document.getElementById('donate-modal');
+			var donateModalTrigger = null;
+
+			function closeDonateModal() {
+				donateModal.classList.remove('open');
+				document.body.style.overflow = '';
+				if (donateModalTrigger) donateModalTrigger.focus();
+			}
+
+			document.querySelectorAll('[data-donate-modal-open]').forEach(function (button) {
+				button.addEventListener('click', function () {
+					donateModalTrigger = button;
+					donateModal.classList.add('open');
+					document.body.style.overflow = 'hidden';
+					donateModal.querySelector('[data-donate-modal-close]').focus();
+				});
+			});
+			document.querySelector('[data-donate-modal-close]').addEventListener('click', closeDonateModal);
+			donateModal.addEventListener('click', function (event) {
+				if (event.target === donateModal) closeDonateModal();
+			});
+			document.addEventListener('keydown', function (event) {
+				if (event.key === 'Escape' && donateModal.classList.contains('open')) closeDonateModal();
+			});
+		}());
+	</script>
 
 	<script>
 		(function () {
