@@ -391,6 +391,58 @@
 						</article>
 					</div>
 					<p class="mt-6 text-[12px] leading-5 text-slate">Sponsorships are annual. Logo artwork and linking details will be coordinated after your inquiry. Contact <a class="font-semibold text-crimson hover:underline" href="mailto:info@ga04gagop.org">info@ga04gagop.org</a> with questions.</p>
+
+					<div class="mt-12 border-t border-slate/20 pt-10">
+						<div class="max-w-2xl">
+							<p class="text-[11px] font-bold uppercase tracking-[.2em] text-crimson">Contribution levels</p>
+							<h2 class="display-font mt-3 text-[29px] sm:text-[34px]">Choose your contribution</h2>
+						</div>
+						<div class="mt-7 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+							<article class="flex flex-col border-t-4 border-slate/30 bg-white p-6 shadow-sm">
+								<h3 class="text-[13px] font-bold uppercase tracking-[.14em] text-slate">Supporter Tier</h3>
+								<p class="mt-3 text-[34px] font-bold tracking-tight">$25</p>
+								<button type="button" data-sponsorship-tier="supporter" class="mt-5 inline-flex min-h-11 items-center justify-center border border-ink px-4 text-[11px] font-bold uppercase tracking-[.08em] text-ink transition-colors hover:bg-ink hover:text-white">Contribute $25</button>
+							</article>
+							<article class="flex flex-col border-t-4 border-slate/40 bg-white p-6 shadow-sm">
+								<h3 class="text-[13px] font-bold uppercase tracking-[.14em] text-slate">Advocate Tier</h3>
+								<p class="mt-3 text-[34px] font-bold tracking-tight">$100</p>
+								<button type="button" data-sponsorship-tier="advocate" class="mt-5 inline-flex min-h-11 items-center justify-center border border-ink px-4 text-[11px] font-bold uppercase tracking-[.08em] text-ink transition-colors hover:bg-ink hover:text-white">Contribute $100</button>
+							</article>
+							<article class="flex flex-col border-t-4 border-ink/50 bg-white p-6 shadow-sm">
+								<h3 class="text-[13px] font-bold uppercase tracking-[.14em] text-ink">Sustainer Tier</h3>
+								<p class="mt-3 text-[34px] font-bold tracking-tight">$250</p>
+								<button type="button" data-sponsorship-tier="sustainer" class="mt-5 inline-flex min-h-11 items-center justify-center border border-ink px-4 text-[11px] font-bold uppercase tracking-[.08em] text-ink transition-colors hover:bg-ink hover:text-white">Contribute $250</button>
+							</article>
+							<article class="flex flex-col border-t-4 border-navy bg-white p-6 shadow-sm">
+								<h3 class="text-[13px] font-bold uppercase tracking-[.14em] text-navy">Business Leader Tier</h3>
+								<p class="mt-3 text-[34px] font-bold tracking-tight">$500</p>
+								<button type="button" data-sponsorship-tier="business-leader" class="mt-5 inline-flex min-h-11 items-center justify-center border border-ink px-4 text-[11px] font-bold uppercase tracking-[.08em] text-ink transition-colors hover:bg-ink hover:text-white">Contribute $500</button>
+							</article>
+							<article class="flex flex-col border-t-4 border-[#b89a55] bg-white p-6 shadow-sm">
+								<h3 class="text-[13px] font-bold uppercase tracking-[.14em] text-ink">Coalition Builder Tier</h3>
+								<p class="mt-3 text-[34px] font-bold tracking-tight">$1,000</p>
+								<button type="button" data-sponsorship-tier="coalition-builder" class="mt-5 inline-flex min-h-11 items-center justify-center border border-ink px-4 text-[11px] font-bold uppercase tracking-[.08em] text-ink transition-colors hover:bg-ink hover:text-white">Contribute $1,000</button>
+							</article>
+							<article class="flex flex-col border-t-4 border-crimson bg-white p-6 shadow-sm">
+								<h3 class="text-[13px] font-bold uppercase tracking-[.14em] text-crimson">Chairman's Circle Tier</h3>
+								<p class="mt-3 text-[34px] font-bold tracking-tight">$2,500</p>
+								<button type="button" data-sponsorship-tier="chairmans-circle" class="mt-5 inline-flex min-h-11 items-center justify-center bg-crimson px-4 text-[11px] font-bold uppercase tracking-[.08em] text-white transition-colors hover:bg-red-700">Contribute $2,500</button>
+							</article>
+						</div>
+
+						<div id="sponsorship-form" class="mx-auto mt-10 hidden max-w-2xl scroll-mt-24 rounded-2xl border-t-4 border-crimson bg-white p-6 shadow-xl sm:p-10" aria-labelledby="sponsorship-summary-heading">
+							<div class="mb-6 rounded-xl border border-slate/20 bg-paper p-5 sm:p-6" aria-live="polite">
+								<div class="flex items-start justify-between gap-4">
+									<div>
+										<h3 id="sponsorship-summary-heading" class="display-font text-[20px] font-bold leading-snug text-ink sm:text-[22px]">Selected Tier: Supporter Tier - $25</h3>
+										<p id="sponsorship-summary-perks" class="mt-3 text-[14px] leading-6 text-slate">Includes District Newsletter recognition and Grassroots Member status.</p>
+									</div>
+									<button type="button" data-sponsorship-close aria-label="Close contribution form" class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-2xl leading-none text-slate transition-colors hover:bg-slate/10 hover:text-ink">&times;</button>
+								</div>
+							</div>
+							<script src="https://www.cognitoforms.com/f/seamless.js" data-key="CLzgixDg4E2d6LUF6WqoKg" data-form="2"></script>
+						</div>
+					</div>
 				</div>
 			</section>
 		</div>
@@ -495,9 +547,63 @@
 		const newsletterDialog = document.getElementById('newsletter-dialog');
 		const comingSoonDialog = document.getElementById('coming-soon-dialog');
 		const newsletterShownKey = 'ga04gagop-newsletter-shown';
+		const sponsorshipForm = document.getElementById('sponsorship-form');
+		const sponsorshipSummaryHeading = document.getElementById('sponsorship-summary-heading');
+		const sponsorshipSummaryPerks = document.getElementById('sponsorship-summary-perks');
+		const sponsorshipTiers = {
+			supporter: {
+				name: 'Supporter Tier',
+				amount: '$25',
+				perks: 'Includes District Newsletter recognition and Grassroots Member status.'
+			},
+			advocate: {
+				name: 'Advocate Tier',
+				amount: '$100',
+				perks: 'Includes Supporter benefits + 1 ticket to local District Breakfasts.'
+			},
+			sustainer: {
+				name: 'Sustainer Tier',
+				amount: '$250',
+				perks: 'Includes Advocate benefits + VIP seating at local county rallies.'
+			},
+			'business-leader': {
+				name: 'Business Leader Tier',
+				amount: '$500',
+				perks: 'Includes Sustainer benefits + Business logo listed on GAGOP4th.us sponsor banner.'
+			},
+			'coalition-builder': {
+				name: 'Coalition Builder Tier',
+				amount: '$1,000',
+				perks: "Includes Business Leader benefits + 2 VIP tickets to Chairman's Annual Dinner."
+			},
+			'chairmans-circle': {
+				name: "Chairman's Circle Tier",
+				amount: '$2,500',
+				perks: 'Includes all perks + Private VIP Reception access with district leadership and elected officials.'
+			}
+		};
+		let lastSponsorshipTrigger = null;
 
 		document.querySelectorAll('[data-newsletter-open]').forEach((button) => {
 			button.addEventListener('click', () => openNewsletterDialog());
+		});
+		document.querySelectorAll('[data-sponsorship-tier]').forEach((button) => {
+			button.addEventListener('click', () => {
+				const tier = sponsorshipTiers[button.dataset.sponsorshipTier];
+				if (!tier) {
+					throw new Error(`Unknown sponsorship tier: ${button.dataset.sponsorshipTier}`);
+				}
+
+				sponsorshipSummaryHeading.textContent = `Selected Tier: ${tier.name} - ${tier.amount}`;
+				sponsorshipSummaryPerks.textContent = tier.perks;
+				sponsorshipForm.classList.remove('hidden');
+				lastSponsorshipTrigger = button;
+				sponsorshipForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			});
+		});
+		document.querySelector('[data-sponsorship-close]').addEventListener('click', () => {
+			sponsorshipForm.classList.add('hidden');
+			lastSponsorshipTrigger?.focus();
 		});
 		document.querySelectorAll('[data-newsletter-close]').forEach((button) => {
 			button.addEventListener('click', () => newsletterDialog.close());
