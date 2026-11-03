@@ -265,7 +265,7 @@
 			const signupError = document.getElementById('signup-error');
 			const signupSuccess = document.getElementById('signup-success');
 			let selectedSlot = null;
-			const availableSlots = new Set([10, 20, 21, 37, 42, 46]);
+			const availableSlots = new Set();
 			const prefilledSlots = new Set();
 			for (let index = 0; index < 48; index += 1) {
 				if (!availableSlots.has(index)) prefilledSlots.add(index);
